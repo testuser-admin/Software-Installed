@@ -150,6 +150,15 @@ h3{font-size:13px;margin:0 0 8px}
   .pdf-summary-row>div:last-child{border-right:0;text-align:right}
 }
 </style>
+<style id="management-enhancement-css">
+/* Management / executive layer */
+.mgmt-hero{background:linear-gradient(135deg,#101b35 0%,#1d3973 62%,#2457d6 100%);color:#fff;border-radius:16px;padding:24px 26px;margin-bottom:18px;box-shadow:0 12px 32px rgba(16,35,75,.16)}
+.mgmt-hero .eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.75;font-weight:700}.mgmt-hero h2{font-size:24px;margin:5px 0 6px}.mgmt-hero p{margin:0;max-width:900px;color:#dbe5ff;font-size:13px;line-height:1.55}.mgmt-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.mgmt-pill{padding:7px 10px;border:1px solid #ffffff33;background:#ffffff12;border-radius:999px;font-size:11px}
+.exec-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:16px}.exec-kpi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px;box-shadow:var(--shadow);min-height:105px}.exec-kpi .ek-label{font-size:11px;color:var(--muted);font-weight:700}.exec-kpi .ek-value{font-size:25px;font-weight:800;margin-top:7px}.exec-kpi .ek-sub{font-size:10px;color:var(--muted);margin-top:4px}.ek-good{border-top:3px solid var(--good)}.ek-warn{border-top:3px solid var(--warn)}.ek-danger{border-top:3px solid var(--danger)}
+.mgmt-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-bottom:16px}.mgmt-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}.mgmt-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow)}.mgmt-card h3{font-size:15px;margin:0 0 4px}.mgmt-desc{font-size:11px;color:var(--muted);margin-bottom:14px}.mgmt-bars{display:flex;flex-direction:column;gap:10px}.mgmt-barrow{display:grid;grid-template-columns:155px 1fr 58px;align-items:center;gap:9px;font-size:11px}.mgmt-barlabel{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mgmt-track{height:9px;background:#edf1f7;border-radius:10px;overflow:hidden}.mgmt-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#2457d6,#6d8ff2)}.mgmt-count{text-align:right;font-weight:700}.mgmt-donut-wrap{display:flex;align-items:center;gap:22px;justify-content:center;min-height:180px}.mgmt-donut{width:150px;height:150px;border-radius:50%;background:conic-gradient(#178a5b 0 25%,#2457d6 25% 55%,#b56a00 55% 80%,#c83c4b 80% 100%);position:relative}.mgmt-donut:after{content:"";position:absolute;inset:31px;background:#fff;border-radius:50%}.mgmt-legend{display:flex;flex-direction:column;gap:9px;font-size:11px}.mgmt-legend span{display:flex;align-items:center;gap:7px}.mgmt-dot{width:9px;height:9px;border-radius:50%;display:inline-block}.insight-list{display:flex;flex-direction:column;gap:9px}.insight{padding:11px 12px;border-radius:9px;background:#f7f9fd;border-left:4px solid #2457d6;font-size:11px;line-height:1.45}.insight.warn{border-left-color:#b56a00;background:#fff9ed}.insight.danger{border-left-color:#c83c4b;background:#fff2f4}.insight.good{border-left-color:#178a5b;background:#eefaf5}.rank-table{width:100%;border-collapse:collapse;font-size:11px}.rank-table td{padding:7px 5px;border-bottom:1px solid var(--line)}.rank-table td:last-child{text-align:right;font-weight:700}.host-search{background:linear-gradient(180deg,#fff,#fafcff);border:1px solid #cfd8e6}.host-controls{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:start}.host-controls textarea{width:100%;min-height:78px;resize:vertical;border:1px solid #d7deea;border-radius:8px;padding:10px;font:12px Inter,Segoe UI,Arial,sans-serif}.host-result{margin-top:14px}.host-result-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:9px}.host-card{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}.host-card-head{background:#f6f8fc;padding:10px 12px;display:flex;justify-content:space-between;gap:10px;align-items:center}.host-card-head b{font-size:13px}.host-card-meta{font-size:10px;color:var(--muted)}.host-sw{padding:10px 12px;display:flex;gap:6px;flex-wrap:wrap}.host-chip{background:#fff;border:1px solid #dfe5ef;border-radius:999px;padding:5px 8px;font-size:10px}.host-chip b{color:#315cc5}.host-empty{padding:16px;text-align:center;color:var(--muted);font-size:12px}.mgmt-section-title{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:22px 0 10px}.mgmt-section-title h2{margin:0;font-size:18px}.mgmt-section-title p{margin:0;color:var(--muted);font-size:11px}
+@media(max-width:1200px){.exec-kpis{grid-template-columns:repeat(3,1fr)}.mgmt-grid,.mgmt-grid3{grid-template-columns:1fr}}@media(max-width:700px){.exec-kpis{grid-template-columns:repeat(2,1fr)}.mgmt-barrow{grid-template-columns:100px 1fr 48px}.host-controls{grid-template-columns:1fr}.mgmt-donut-wrap{flex-direction:column}}
+</style>
+
 </head>
 <body>
 <div id="pdfReport" class="pdf-report" aria-hidden="true"></div>
@@ -170,6 +179,41 @@ h3{font-size:13px;margin:0 0 8px}
    <div class="desc" style="margin-bottom:0">Upload the CSV exported from the UEM dashboard (Computer Name, Installed Applications, OS, IP Address, CPU, Last Report Time). Nothing is uploaded to a server.</div>
  </div>
  <div class="card scope-panel"><div class="scope-title"><div><b>View Scope</b><div class="small">Default is Overall. Optionally filter the complete dashboard by DISCOM or Zone. The UPPCL office hierarchy is also shown as DISCOM → Zone → Circle → Division → SDO.</div></div><div class="scope-controls"><select id="scopeMode"><option value="overall">Overall</option><option value="discom">DISCOM-wise</option><option value="zone">Zone-wise</option></select><select id="scopeDiscom" style="display:none"><option value="">Select DISCOM</option></select><select id="scopeZone" style="display:none"><option value="">Select Zone</option></select><button class="ghost-btn" id="downloadScopeBtn">Download scope CSV</button></div></div><div id="scopeLabel" class="scope-label">Overall view — all systems in the uploaded file</div></div>
+
+<!-- Management-ready executive layer -->
+<section id="managementOverview">
+ <div class="mgmt-hero">
+  <div class="eyebrow">Management overview</div>
+  <h2>Endpoint Security & Software Intelligence</h2>
+  <p id="mgmtSubtitle">Upload the UEM report to generate an executive view of endpoint coverage, security posture, software exposure, operating-system mix and priority observations.</p>
+  <div class="mgmt-meta"><span class="mgmt-pill" id="mgmtFilePill">No report loaded</span><span class="mgmt-pill" id="mgmtScopePill">Overall scope</span><span class="mgmt-pill">Processed locally in browser</span></div>
+ </div>
+ <div class="exec-kpis" id="execKpis"></div>
+ <div class="mgmt-grid">
+  <div class="mgmt-card"><h3>Endpoint security posture</h3><div class="mgmt-desc">Distribution of managed systems by antivirus and EDR coverage.</div><div class="mgmt-donut-wrap"><div class="mgmt-donut" id="postureDonut"></div><div class="mgmt-legend" id="postureLegend"></div></div></div>
+  <div class="mgmt-card"><h3>Management observations</h3><div class="mgmt-desc">Automatically generated from the uploaded dataset; no external assumptions are used.</div><div class="insight-list" id="managementInsights"></div></div>
+ </div>
+ <div class="mgmt-grid3">
+  <div class="mgmt-card"><h3>Systems by DISCOM</h3><div class="mgmt-desc">Endpoint distribution across the utility organisations.</div><div class="mgmt-bars" id="mgmtDiscomBars"></div></div>
+  <div class="mgmt-card"><h3>Top software footprint</h3><div class="mgmt-desc">Most widely installed normalized software products.</div><div id="mgmtTopSoftware"></div></div>
+  <div class="mgmt-card"><h3>Operating-system landscape</h3><div class="mgmt-desc">OS editions and builds consolidated into OS families.</div><div class="mgmt-bars" id="mgmtOsBars"></div></div>
+ </div>
+ <div class="mgmt-grid">
+  <div class="mgmt-card"><h3>Security & exposure indicators</h3><div class="mgmt-desc">Areas that may warrant management attention.</div><div class="mgmt-bars" id="mgmtRiskBars"></div></div>
+  <div class="mgmt-card"><h3>Endpoint software density</h3><div class="mgmt-desc">How many software records are reported per managed endpoint.</div><div class="mgmt-bars" id="mgmtDensityBars"></div></div>
+ </div>
+</section>
+
+<div class="mgmt-section-title"><div><h2>Hostname Software Lookup</h2><p>Search one or multiple hostnames and retrieve every software product reported on each endpoint.</p></div></div>
+<section class="mgmt-card host-search" id="hostnameLookup">
+ <div class="host-controls">
+  <textarea id="hostnameQuery" placeholder="Enter one or multiple hostnames — one per line, comma-separated, or space-separated. Example: PU-01-001, PU-01-002"></textarea>
+  <button class="ghost-btn" id="hostnameSearchBtn">Search hostnames</button>
+  <button class="ghost-btn" id="hostnameClearBtn">Clear</button>
+ </div>
+ <div class="host-result" id="hostnameResults"><div class="host-empty">Upload a UEM report and enter hostname(s) above.</div></div>
+</section>
+
 
  <section class="kpis" id="kpis"></section>
 
@@ -233,12 +277,12 @@ h3{font-size:13px;margin:0 0 8px}
   <div class="av-edr-hierarchy-head">
    <div>
     <h2>DISCOM → Zone → Circle → Division → SDO</h2>
-    <p>Hierarchy is mapped from the UPPCL office-code master embedded in this dashboard. The tree below defaults to systems having both Antivirus and the organisation-defined Trend Micro EDR. Cylance PROTECT is treated as a special antivirus product and can be included or excluded from the Antivirus calculation using the checkbox above. Counts are calculated at every hierarchy level from the uploaded AV + EDR endpoint data. Use the switch to view all managed systems.</p>
+    <p>Hierarchy is mapped from the UPPCL office-code master embedded in this dashboard. The tree below defaults to systems having both Antivirus and the organisation-defined Trend Micro EDR. Trend Micro is the only product family counted as EDR. Cylance PROTECT can be included or excluded from the Antivirus calculation using the checkbox above; no other product is counted as EDR. Counts are calculated at every hierarchy level from the uploaded AV + EDR endpoint data. Use the switch to view all managed systems.</p>
    </div>
    <div class="av-edr-hierarchy-actions">
     <select id="hierarchyMode"><option value="av_edr" selected>Antivirus + EDR systems</option><option value="all">All managed systems</option></select>
     <input id="hierarchySearch" class="search" style="width:220px" placeholder="Search hierarchy / code…">
-    <label style="display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;white-space:nowrap"><input type="checkbox" id="includeCylanceProtect" checked> Count Cylance PROTECT as Antivirus</label>
+    <label style="display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;white-space:nowrap"><input type="checkbox" id="includeCylanceProtect" checked> Count Cylance PROTECT as Antivirus (optional)</label>
     <button class="ghost-btn" id="hierarchyExpandBtn">Expand all</button>
     <button class="ghost-btn" id="hierarchyCollapseBtn">Collapse all</button>
     <button class="ghost-btn" id="downloadAllOfficesBtn">Download all offices CSV</button>
@@ -16843,8 +16887,7 @@ R(/^data protect/i,"Data Protect","Unknown",CAT.UTL);
 
 /* ---------------- EDR / XDR ---------------- */
 /* Organisation policy: ONLY Trend Micro is treated as EDR.
-   Other vendors/products that may technically provide EDR/XDR capabilities
-   are intentionally NOT counted in the dashboard's EDR field/readiness logic. */
+   No other vendor/product is counted in the dashboard's EDR field/readiness logic. */
 R(/trend ?(?:ai|micro).*(vision one.*(endpoint|sensor|agent)|xdr|endpoint sensor)|vision one endpoint/i,"Trend Vision One Endpoint","Trend Micro",CAT.EDR,"EDR","Counted as EDR per organisation policy");
 
 /* Other endpoint/security products are retained as security tools, NOT EDR. */
@@ -16863,7 +16906,7 @@ R(/symantec.*(edr|endpoint detection)/i,"Symantec EDR","Broadcom",CAT.SECT,"","E
 R(/cybereason|cynet|fireeye|mandiant|harmony endpoint|check ?point endpoint|trellix (edr|helix)|mvision edr|deep instinct|sysmon|tanium|bitdefender endpoint|gravityzone/i,"Other Endpoint Security Tool","Various",CAT.SECT,"","Endpoint/security product – intentionally not counted as EDR per organisation policy");
 
 /* ---------------- ANTIVIRUS / ENDPOINT PROTECTION ---------------- */
-R(/apex one|officescan|trend ?micro (security|worry|apex)|trendmicro/i,"Trend Micro Apex One","Trend Micro",CAT.EDR,"EDR","Treated as EDR (Apex One agent, incl. Endpoint Sensor) per organisation policy");
+R(/apex one|officescan|trend ?micro (security|worry|apex)|trendmicro/i,"Trend Micro Apex One","Trend Micro",CAT.EDR,"EDR","Trend Micro is treated as EDR only per organisation policy; it is not counted as Antivirus.");
 R(/cylance ?protect|cylanceprotect|^cylance\b/i,"Cylance PROTECT","BlackBerry Cylance",CAT.AV,"AV","AI-based next-gen antivirus");
 R(/mcafee (agent|epolicy)|mcafee.*epo|mcafee.*management/i,"McAfee Agent (ePO)","McAfee / Trellix",CAT.MGT,"","Management agent only – not AV by itself");
 R(/mcafee (security scan|webadvisor|safe connect|true key|vpn|shredder|personal locker)|webadvisor by mcafee|mcafee.*scan plus/i,"McAfee Bundled Scanner / Advisor","McAfee",CAT.SECT,"","Free bundled scanner / browser advisor – not real-time AV");
@@ -17844,8 +17887,79 @@ function render(){
   A=aggregate();
   const empty=$("emptyState"); if(empty)empty.style.display=rows.length?"none":"block";
   $("scopeLabel").textContent=rows.length?(scopeName()+" view — "+fmt(A.systems.length)+" systems in scope"):"Overall view — upload a file to begin";
-  renderKPIs(A); renderReadiness(A); renderCategories(A); renderOS(A); renderTop(A); renderSummary(A); renderAvEdrHierarchy();
+  renderKPIs(A); renderManagementOverview(A); renderHostnameLookup(); renderReadiness(A); renderCategories(A); renderOS(A); renderTop(A); renderSummary(A); renderAvEdrHierarchy();
   populateFilters(A); renderCoinstall(A); fillRefControls(A); renderRefCheck(A); renderComparison(A); renderSoftwareTable(A); renderComputerTable(A); renderUnrecognised();
+}
+
+
+
+/* ---------- management executive layer ---------- */
+function managementBarHtml(entries,total){
+  if(!entries.length)return '<div class="host-empty">No data available.</div>';
+  const max=Math.max(1,...entries.map(x=>x[1]));
+  return entries.map(([label,value])=>`<div class="mgmt-barrow"><div class="mgmt-barlabel" title="${esc(label)}">${esc(label)}</div><div class="mgmt-track"><div class="mgmt-fill" style="width:${Math.max(1,value/max*100)}%"></div></div><div class="mgmt-count">${fmt(value)}</div></div>`).join('');
+}
+function managementDonut(parts){
+  const total=parts.reduce((a,x)=>a+x[1],0)||1;let cur=0;
+  const colors=['#178a5b','#2457d6','#b56a00','#c83c4b'];
+  const stops=[]; parts.forEach((p,i)=>{const a=cur/total*100,b=(cur+p[1])/total*100;stops.push(`${colors[i%colors.length]} ${a}% ${b}%`);cur+=p[1];});
+  $("postureDonut").style.background=`conic-gradient(${stops.join(',')})`;
+  $("postureLegend").innerHTML=parts.map((p,i)=>`<span><i class="mgmt-dot" style="background:${colors[i%colors.length]}"></i>${esc(p[0])}: <b>${fmt(p[1])}</b> (${pct(p[1],total)})</span>`).join('');
+}
+function renderManagementOverview(a){
+  const S=a.systems,N=S.length||1;
+  const av=S.filter(s=>s.av.size>0).length, edr=S.filter(s=>s.edr.size>0).length, both=S.filter(s=>s.av.size>0&&s.edr.size>0).length;
+  const noCoverage=S.filter(s=>s.av.size===0&&s.edr.size===0&&s.products.size>0).length;
+  const noData=S.filter(s=>s.products.size===0).length;
+  const risky=S.filter(s=>s.risk.size>0).length, games=S.filter(s=>s.games.size>0).length, remote=S.filter(s=>s.remote.size>0).length, multiAv=S.filter(s=>s.av.size>1).length;
+  const unrecNames=a.software.filter(x=>!x.known), unrecSystems=new Set(); unrecNames.forEach(p=>p.systems.forEach(x=>unrecSystems.add(x)));
+  const discom=[...new Map(S.map(s=>[FULL[s.dc]||s.dc||'Unmatched',0])).entries()];
+  const dm=new Map(discom);S.forEach(s=>{const k=FULL[s.dc]||s.dc||'Unmatched';dm.set(k,(dm.get(k)||0)+1);});
+  const discomEntries=[...dm].sort((x,y)=>y[1]-x[1]);
+  const osEntries=Object.entries(a.osSystems).sort((x,y)=>y[1]-x[1]).slice(0,8);
+  const top=a.software.slice().sort((x,y)=>y.systems.size-x.systems.size).slice(0,7);
+  const avg=N?a.records/N:0;
+  const densityBuckets=[['0 software records',noData],['1–5',S.filter(s=>s.recs>=1&&s.recs<=5).length],['6–15',S.filter(s=>s.recs>=6&&s.recs<=15).length],['16–30',S.filter(s=>s.recs>=16&&s.recs<=30).length],['31+',S.filter(s=>s.recs>=31).length]];
+  const riskEntries=[['Antivirus present',av],['EDR / XDR present',edr],['AV + EDR together',both],['No AV / EDR',noCoverage],['Unrecognised software',unrecSystems.size],['Risk / PUP software',risky],['Remote-access tools',remote],['Games / game platforms',games],['Multiple antivirus',multiAv]];
+  $("mgmtFilePill").textContent=currentFile||'No report loaded';
+  $("mgmtScopePill").textContent=scopeName()+` • ${fmt(N)} systems`;
+  $("mgmtSubtitle").textContent=N?`Executive snapshot of ${fmt(N)} managed systems, ${fmt(a.software.length)} normalized software products and ${fmt(a.records)} software installation records in the selected scope.`:'Upload the UEM report to generate the executive view.';
+  $("execKpis").innerHTML=[
+    ['Managed endpoints',fmt(N),scopeName(),''],
+    ['AV coverage',pct(av,N),`${fmt(av)} endpoints`,av/N>=.9?'ek-good':'ek-warn'],
+    ['EDR coverage',pct(edr,N),`${fmt(edr)} endpoints`,edr/N>=.9?'ek-good':'ek-warn'],
+    ['AV + EDR',pct(both,N),`${fmt(both)} endpoints`,'ek-good'],
+    ['No AV / EDR',fmt(noCoverage),`${pct(noCoverage,N)} of endpoints`,noCoverage?'ek-danger':'ek-good'],
+    ['Unrecognised software',fmt(unrecNames.length),`${fmt(unrecSystems.size)} affected endpoints`,unrecNames.length?'ek-warn':'ek-good']
+  ].map(x=>`<div class="exec-kpi ${x[3]}"><div class="ek-label">${x[0]}</div><div class="ek-value">${x[1]}</div><div class="ek-sub">${x[2]}</div></div>`).join('');
+  managementDonut([['AV + EDR',both],['AV only',Math.max(0,av-both)],['EDR only',Math.max(0,edr-both)],['Neither / no coverage',noCoverage+noData]]);
+  $("mgmtDiscomBars").innerHTML=managementBarHtml(discomEntries,N);
+  $("mgmtOsBars").innerHTML=managementBarHtml(osEntries,N);
+  $("mgmtRiskBars").innerHTML=managementBarHtml(riskEntries.filter(x=>x[1]>0),N);
+  $("mgmtDensityBars").innerHTML=managementBarHtml(densityBuckets,N);
+  $("mgmtTopSoftware").innerHTML=`<table class="rank-table">${top.map((x,i)=>`<tr><td>${i+1}. ${esc(x.name)}</td><td>${fmt(x.systems.size)} (${pct(x.systems.size,N)})</td></tr>`).join('')||'<tr><td>No software data</td></tr>'}</table>`;
+  const insights=[];
+  if(edr<N) insights.push({c:edr/N<.9?'danger':'warn',t:`EDR coverage gap: ${fmt(N-edr)} endpoints (${pct(N-edr,N)}) do not currently have Trend Micro EDR. AV + EDR combined coverage gap: ${fmt(N-both)} endpoints (${pct(N-both,N)}) are not currently in the AV + EDR state.`});
+  if(noCoverage) insights.push({c:'danger',t:`${fmt(noCoverage)} endpoints report neither antivirus nor EDR coverage in the current dataset.`});
+  if(unrecSystems.size) insights.push({c:'warn',t:`${fmt(unrecNames.length)} normalized software entries remain unrecognised, affecting ${fmt(unrecSystems.size)} endpoints. These should be reviewed and classified.`});
+  if(risky) insights.push({c:'warn',t:`${fmt(risky)} endpoints contain software classified by the dashboard as risky / PUP and may merit review.`});
+  if(multiAv) insights.push({c:'warn',t:`${fmt(multiAv)} endpoints have multiple antivirus products detected, which may create operational or performance conflicts.`});
+  if(remote) insights.push({c:'warn',t:`${fmt(remote)} endpoints have remote-access tools detected; validate business justification and access controls.`});
+  if(games) insights.push({c:'warn',t:`${fmt(games)} endpoints have games or game platforms detected; review against acceptable-use policy.`});
+  if(noData) insights.push({c:'danger',t:`${fmt(noData)} endpoints have no software data reported. This is a data-quality / reporting visibility item, not proof that the endpoints have no software.`});
+  insights.push({c:'good',t:`Average reported software records per endpoint: ${avg.toFixed(1)}. The dashboard consolidates software versions into normalized products for management reporting.`});
+  $("managementInsights").innerHTML=insights.slice(0,7).map(x=>`<div class="insight ${x.c}">${esc(x.t)}</div>`).join('');
+}
+function renderHostnameLookup(){
+  const box=$("hostnameResults"); if(!A){box.innerHTML='<div class="host-empty">Upload a UEM report first.</div>';return;}
+  const raw=$("hostnameQuery").value.trim(); if(!raw){box.innerHTML='<div class="host-empty">Enter one or more hostnames.</div>';return;}
+  const qs=[...new Set(raw.split(/[\n,;]+/).map(x=>x.trim()).filter(Boolean))];
+  const found=[]; const missing=[]; const systems=A.systems;
+  qs.forEach(q=>{const exact=systems.filter(s=>s.computer.toLowerCase()===q.toLowerCase());const partial=exact.length?exact:systems.filter(s=>s.computer.toLowerCase().includes(q.toLowerCase()));if(partial.length)found.push({q,matches:partial});else missing.push(q);});
+  let out=`<div class="host-result-head"><b>${fmt(found.reduce((n,x)=>n+x.matches.length,0))} matching endpoint record(s)</b><span class="small">${fmt(qs.length)} search term(s)</span></div>`;
+  found.forEach(x=>x.matches.forEach(s=>{const products=[...s.products.keys()].sort((a,b)=>a.localeCompare(b));out+=`<div class="host-card"><div class="host-card-head"><div><b>${esc(s.computer)}</b><div class="host-card-meta">${esc(FULL[s.dc]||s.dc||'Unmatched')} • ${esc(s.zone||'Zone not mapped')} • ${esc(s.os||'Unknown OS')} • ${esc(s.ip||'IP not reported')}</div></div><span class="badge ${s.av.size&&s.edr.size?'good':s.av.size?'warn':'danger'}">${esc(s.posture)}</span></div><div class="host-sw">${products.length?products.map(p=>{const v=A.swMap.get(p);return `<span class="host-chip">${esc(p)}${v?.vendor?` <b>• ${esc(v.vendor)}</b>`:''}</span>`}).join(''):'<span class="small">No software reported for this endpoint.</span>'}</div></div>`;}));
+  if(missing.length)out+=`<div class="insight warn"><b>Not found:</b> ${missing.map(esc).join(', ')}</div>`;
+  box.innerHTML=out;
 }
 
 /* ---------- events ---------- */
@@ -17864,6 +17978,7 @@ $("fileInput").addEventListener("change",async e=>{
   e.target.value="";
 });
 ["softwareSearch","categoryFilter","recogFilter","sortSoftware"].forEach(id=>$(id).addEventListener("input",()=>renderSoftwareTable(A)));
+$("hostnameSearchBtn").addEventListener("click",renderHostnameLookup); $("hostnameClearBtn").addEventListener("click",()=>{$("hostnameQuery").value="";renderHostnameLookup();}); $("hostnameQuery").addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key==="Enter")renderHostnameLookup();});
 $("includeCylanceProtect").addEventListener("change",e=>{includeCylanceProtectAV=e.target.checked; render();});
 ["computerSearch","osFilter","cohortFilter"].forEach(id=>$(id).addEventListener("input",()=>renderComputerTable(A)));
 $("softwareTable").addEventListener("click",e=>{
